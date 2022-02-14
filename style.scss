@@ -73,6 +73,7 @@ footer {
   .social {
     display: flex;
     justify-content: space-around;
+   
     
   }
 }
@@ -213,10 +214,10 @@ h1 {
 @media (min-width: 340px) {
   .links .icon {
     right: 10rem;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   .links {
-    font-size: 34px;
+    font-size: 3rem;
   }
   // #projectscontent {
   //   flex-direction: row;
@@ -240,7 +241,7 @@ h1 {
   .video {
    
     margin: 1rem;
-  
-  }
- 
+    }
+ .social {
+  font-size: 2rem;}
   }
