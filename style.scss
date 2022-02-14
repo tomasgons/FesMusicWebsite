@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+$primary-color: #1019bd;
+$secondary-color: #be2edd;
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+* {
+  box-sizing: border-box;
+ 
+}
+.video {
+  display: flex;
+  justify-content: center;
+ 
+  margin: 1rem;
+
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  background-image: url('pics/space.jpg');
+  color: white;
+  text-align: center
+  
+}
+a {
+  color: white;
+  text-decoration: none;
+
+}
+
+p {
+  font-size: 1.2rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+
+header {
+  
+  text-align: center;
+
+ padding-top:10rem;
+ img {
+  width: 80%;
+}
+  
+}
+
+
+footer {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background: rgba(0, 0, 0, 0.77);
+  padding: 1rem;
+
+  .social {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+}
+button,
+input[type="submit"] {
+  background-color: $secondary-color;
+  border: 0;
+  color: white;
+
+  padding: 8px 12px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.427);
+  button:focus {
+    outline: none;
+  }
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+ 
+  min-height: 6500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  text-align: center;
+  
+
+}
+
+h1 {
+  margin-top: 70rem;
+
+  font-size: 3rem;
+ background: url(https://d2pn8kiwq2w21t.cloudfront.net/images/jpegPIA17669.width-1024.jpg);
+ background-position: center;
+ -webkit-text-fill-color: transparent;
+ -webkit-background-clip: text;
+ background-clip: text;
+}
+
+
+
+
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+}
+
+.modal-containeropen {
+  background-color: rgba(0, 0, 0, 0.6);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.3s ease-in;
+}
+
+.modal {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.727);
+  position: absolute;
+  overflow: hidden;
+  top: 47%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+  z-index: 100;
+}
+
+.modal-header {
+  background-color: $primary-color;
+  color: white;
+  padding: 15px;
+  margin: 0;
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.modal-content {
+  padding: 20px;
+  div {
+    margin: 15px 0;
+    font-family: "Lato", sans-serif;
+    font-size: 17px;
+  }
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+  font-family: "Lato", sans-serif;
+  font-size: 12px;
+}
+.modal-form textarea {
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+.close-btn {
+  color: black;
+  background-color: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  box-shadow: none;
+}
+
+@media (min-width: 340px) {
+  .links .icon {
+    right: 10rem;
+    font-size: 2rem;
+  }
+  .links {
+    font-size: 34px;
+  }
+  // #projectscontent {
+  //   flex-direction: row;
+  // }
+}
+@media (min-width: 900px) {
+ 
+  
+   
+   
+  
+  header {
+    img {
+      width: 70%;
+    }
+  }
+ 
+  h1 {
+    font-size: 4rem;
+  }
+  .video {
+   
+    margin: 1rem;
+  
+  }
+ 
+  }
