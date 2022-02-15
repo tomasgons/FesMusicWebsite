@@ -50,7 +50,7 @@ scene.background = spaceTexture;
 
 // logo
 
-const logoTexture = new THREE.TextureLoader().load('pics/logo.png');
+const logoTexture = new THREE.TextureLoader().load('pics/logogif.gif');
 const logoTexture2 = new THREE.TextureLoader().load('pics/logomirror.png');
 const logo = new THREE.BoxGeometry(1, 4, 6);
 const logomaterial = [
