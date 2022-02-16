@@ -90,8 +90,7 @@ h1 {
   padding: 2rem;
   // transform: translateX(-100%) rotateY(50deg);
   perspective: 1000px;
-}
-iframe {
+#video1 {
   margin: 10rem;
   z-index: 200;
   border: 5px solid white;
@@ -101,57 +100,31 @@ cursor: pointer;
   transform-style: preserve-3d;
   transform-origin: center right;
   transition: transform 1s;
-  transform: translateX(-35%) rotateY(60deg);
-  
-}
-
-
-
-
-.scene {
-  width: 200px;
-  height: 260px;
-  border: 1px solid #CCC;
-  margin: 40px 40px;
-  perspective: 600px;
-}
-
-.card {
-  z-index: 200;
-  position: relative;
-  width: 100%;
-  height: 100%;
+  transform: translateX(25%) rotateY(60deg);
+  }
+  #video2 {
+    margin: 2rem;
+    z-index: 200;
+    border: 5px solid white;
+    border-radius: 5px;
+  box-shadow: 10px 10px 10px 10px 10px white;
   cursor: pointer;
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
-  transform: translateX(-100%) rotateY(50deg);
+    transform-style: preserve-3d;
+    transform-origin: center left;
+    transition: transform 1s;
+    
+    transform: translateX(0%) rotateY(-70deg)
+
+  }
 }
 
-.card.is-flipped {
-  transform: translateX(-100%) rotateY(50deg);
-}
 
-.card__face {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  line-height: 260px;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-  backface-visibility: hidden;
-}
 
-.card__face--front {
-  background: red;
-}
 
-.card__face--back {
-  background: blue;
-  transform: rotateY(180deg);
-}
+
+
+
+
 
 footer {
   margin: 2rem;
@@ -170,10 +143,13 @@ footer {
 
 @media (min-width: 900px) {
  
-  
-   iframe {
-  transform: translateX(-80%) rotateY(70deg);
+  .video { #video1 {
+  transform: translateX(-25%) rotateY(70deg);
    }
+   #video2 {
+    transform: translateX(0%) translateY(-50%)rotateY(-70deg)
+   }}
+  
   header {
     img {
       width: 70%;
