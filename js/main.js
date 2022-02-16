@@ -48,6 +48,11 @@ Array(1000).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load('pics/space.jpg');
 scene.background = spaceTexture;
 
+
+
+// video
+
+
 // logo
 
 const logoTexture = new THREE.TextureLoader().load('pics/logogif.gif');
@@ -57,7 +62,7 @@ const logomaterial = [
      
    
    
-     new THREE.MeshBasicMaterial({ map: logoTexture }, { opacity: 0 }), 
+     new THREE.MeshBasicMaterial({ map: logoTexture }), 
   
      new THREE.MeshBasicMaterial({ map: logoTexture2 }), ];
 const billboard = new THREE.Mesh( logo, logomaterial );
@@ -210,6 +215,7 @@ tomas.rotation.y += 0.01;
 animate();
 
 		
+// non-canvas js
 
 const toggle = document.querySelector(".toggle")
 const nav = document.querySelector("#nav")
