@@ -32,7 +32,7 @@ scene.add(pointLight, ambientLight);
 
 function addStar() {
   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-  const material = new THREE.MeshToonMaterial({ color: 0xfffff4 });
+  const material = new THREE.MeshToonMaterial({ color: 0xffffcf1  });
   const star = new THREE.Mesh(geometry, material);
 
   const [x, y, z] = Array(3)
@@ -43,7 +43,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(1000).fill().forEach(addStar);
+Array(700).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load('pics/space.jpg');
 scene.background = spaceTexture;
@@ -84,12 +84,12 @@ const discTexture = new THREE.TextureLoader().load('pics/fesmap2.jpg');
 const discTexture2 = new THREE.TextureLoader().load('pics/logo.png');
 const discmaterials = [new THREE.MeshBasicMaterial({ map: discTexture2 }), new THREE.MeshBasicMaterial({ map: discTexture }),  new THREE.MeshBasicMaterial({color: 'black' }),  ];
 
-const shape = new THREE.CylinderGeometry(6, 6, .3, 48);
+const shape = new THREE.CylinderGeometry(6, 6, 0.3, 48);
 
 const disc = new THREE.Mesh( shape, discmaterials );
 
 
-scene.add( disc)
+scene.add( disc);
 
     // Tomas
 const tomasTexture = new THREE.TextureLoader().load('pics/tomasfes.png');

@@ -68,7 +68,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  text-align: center;
+
   
 
 }
@@ -85,13 +85,13 @@ h1 {
 }
 .video {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
  
-  padding: 2rem;
+  padding: 3rem;
   // transform: translateX(-100%) rotateY(50deg);
   perspective: 1000px;
 #video1 {
-  margin: 10rem;
+  margin: 2rem;
   z-index: 200;
   border: 5px solid white;
   border-radius: 5px;
@@ -99,8 +99,8 @@ box-shadow: 10px 10px 10px 10px 10px white;
 cursor: pointer;
   transform-style: preserve-3d;
   transform-origin: center right;
-  transition: transform 1s;
-  transform: translateX(25%) rotateY(60deg);
+
+  transform:  rotateY(60deg);
   }
   #video2 {
     margin: 2rem;
@@ -113,7 +113,7 @@ cursor: pointer;
     transform-origin: center left;
     transition: transform 1s;
     
-    transform: translateX(0%) rotateY(-70deg)
+    transform: translateX(10rem) rotateY(-70deg)
 
   }
 }
