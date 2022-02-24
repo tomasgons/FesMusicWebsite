@@ -44,13 +44,7 @@ a {
 
 header {
   text-align: center;
-  margin: 0 auto;
-  width: 80%;
-}
-
-.headernft {
-  text-align: end;
-  padding: 2rem;
+  margin-top: 1rem;
 }
 
 .container {
@@ -87,7 +81,7 @@ header {
 }
 
 h1 {
-  font-size: 10rem;
+  font-size: 3rem;
   background: url(https://d2pn8kiwq2w21t.cloudfront.net/images/jpegPIA17669.width-1024.jpg);
   background-position: center;
   -webkit-text-fill-color: transparent;
@@ -153,7 +147,7 @@ h1 {
 }
 
 footer {
-  margin-bottom: 1rem;
+  margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +178,13 @@ footer .social {
     -webkit-transform: translateX(0%) translateY(-50%) rotateY(-70deg);
             transform: translateX(0%) translateY(-50%) rotateY(-70deg);
   }
+  h2 {
+    font-size: 4rem;
+  }
   h1 {
+    font-size: 4rem;
+  }
+  h1 a {
     font-size: 4rem;
   }
   .video {
