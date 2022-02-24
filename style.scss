@@ -28,23 +28,26 @@ body {
   text-align: center
   
 }
-a {
-  color: white;
-  text-decoration: none;
 
-}
 
 p {
   font-size: 1.2rem;
 }
 h2 {
-  font-size: 2rem;
-  font-weight: 900;
-  }
-  h3 {
-    font-size: 1.5rem;
+  font-size: 3rem;
+  background: url(https://d2pn8kiwq2w21t.cloudfront.net/images/jpegPIA17669.width-1024.jpg);
+  background-position: center;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
   }
 
+  a {
+    color: rgb(7, 208, 7);
+    font-size: 3rem;
+    text-decoration: none;
+  
+  }
 header {
   
   text-align: center;
@@ -90,6 +93,18 @@ h1 {
  -webkit-background-clip: text;
  background-clip: text;
 }
+.chart {
+  margin: 2rem;
+ 
+  z-index: 200;
+ 
+box-shadow: 10px 10px 10px 10px 10px white;
+transform:  translateY(-100%) translateX(120%);
+cursor: pointer;
+ 
+
+
+  }
 .video {
   display: flex;
   justify-content: space-around;
@@ -150,13 +165,13 @@ margin-bottom: 1rem;
 
 @media (min-width: 900px) {
  
-  .video { #video1 {
+  .video  { #video1 {
   transform: translateX(-25%) rotateY(70deg);
    }
    #video2 {
     transform: translateX(0%) translateY(-50%)rotateY(-70deg)
    }}
-  
+ 
  
  
   h1 {
