@@ -47,6 +47,11 @@ header {
   margin-top: 11rem;
 }
 
+.headernft {
+  text-align: end;
+  padding: 2rem;
+}
+
 .container {
   padding: 15px;
   margin: 0 auto;
@@ -155,6 +160,10 @@ footer {
       justify-content: space-around;
   background: rgba(0, 0, 0, 0.77);
   padding: 1rem;
+}
+
+footer a {
+  color: white;
 }
 
 footer .social {
