@@ -44,7 +44,8 @@ a {
 
 header {
   text-align: center;
-  margin-top: 11rem;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .headernft {

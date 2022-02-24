@@ -148,7 +148,7 @@ maarten.position.x = -5;
 maarten.position.y = -1;
 maarten.position.z = -8
 
-disc.position.x = 8;
+disc.position.x = 16;
 disc.position.y = -5;
 disc.position.z = -28;
 
