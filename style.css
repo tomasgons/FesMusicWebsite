@@ -169,6 +169,10 @@ footer .social {
       justify-content: space-around;
 }
 
+footer .social p {
+  font-size: 1.5rem;
+}
+
 @media (min-width: 900px) {
   .video #video1 {
     -webkit-transform: translateX(-25%) rotateY(70deg);
@@ -189,9 +193,6 @@ footer .social {
   }
   .video {
     margin: 1rem;
-  }
-  .social {
-    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
