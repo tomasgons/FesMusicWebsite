@@ -69,7 +69,7 @@ const billboard = new THREE.Mesh( logo, logomaterial );
 scene.add( billboard );
 
 billboard.position.x = -15;
-billboard.position.y = 4;
+billboard.position.y = 8;
 billboard.position.z = -16
 billboard.rotation.y +=30.5;
 billboard.rotation.z += 0.001;
@@ -148,11 +148,12 @@ maarten.position.x = -5;
 maarten.position.y = -1;
 maarten.position.z = -8
 
-disc.position.x = 16;
-disc.position.y = -5;
+disc.position.x = 23;
+disc.position.y = 14;
 disc.position.z = -28;
 
-disc.rotation.x += 1;
+disc.rotation.z += 1;
+disc.rotation.y += 1;
 
 huib.position.x =-1;
 huib.position.y = -2;
@@ -165,7 +166,7 @@ huib.position.z = -10;
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   
-  disc.rotation.y += 0.001;
+  
  
   maarten.rotation.x += 0.02;
   maarten.rotation.y += 0.02;
@@ -201,7 +202,7 @@ function animate() {
     said.rotation.x += 0.01;
     said.rotation.y += 0.01;
     disc.rotation.x += 0.001;
-    disc.rotation.y += 0.001;
+    disc.rotation.z += 0.001;
     marijn.rotation.z += 0.009;
     marijn.rotation.y += 0.015;
     maarten.rotation.z += 0.008;

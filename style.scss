@@ -8,6 +8,7 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+ 
 }
 
 html {
@@ -23,7 +24,8 @@ html {
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
-  background-image: url('pics/space.jpg');
+
+
   color: white;
   text-align: center
   
@@ -52,7 +54,7 @@ header {
   
   text-align: center;
   margin-top: 1rem;
- 
+ margin-bottom: 3rem;
 
   
 }
@@ -72,15 +74,34 @@ header {
 
 }
 .nftcontainer {
- 
-  margin: 0 auto;
-  max-width: 100%;
-  height: 800px;
 
+  margin: 0 auto;
+ padding-bottom: 5rem;
+  max-width: 90%;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+ 
+  justify-content: space-between;
 
+  .card {
+
+    opacity: 0.8;
+
+    transition: transform .2s;
+    
+  img { width: 250px;
+    height: auto;}
+    p{
+      color:rgb(7, 208, 7);
+    }
+   
+   
+   
+  }
+  .card:hover {
+    transform: scale(1.3); 
+    opacity: 1
+  }
 }
 
 h1 {
@@ -169,6 +190,10 @@ a {
 }
 
 @media (min-width: 900px) {
+  .nftcontainer {
+    flex-direction: row;
+
+  }
  
   .video  { #video1 {
   transform: translateX(-25%) rotateY(70deg);
