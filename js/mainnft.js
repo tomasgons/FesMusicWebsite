@@ -68,7 +68,7 @@ const logomaterial = [
 const billboard = new THREE.Mesh( logo, logomaterial );
 scene.add( billboard );
 
-billboard.position.x = -15;
+billboard.position.x = -17;
 billboard.position.y = 8;
 billboard.position.z = -16
 billboard.rotation.y +=30.5;
