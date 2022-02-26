@@ -161,10 +161,28 @@ cursor: pointer;
   }
 }
 
+@keyframes videomove {
+  from {transform: rotateY(0deg)}
+  to {transform: rotateY(360deg);}
+}
+.nft {
+  display: flex;
+  justify-content: end;
+  margin: 5rem;
+  img {
+  width: 5rem;
+  height: 5rem;
+  animation: mymove 5s;
+  animation-iteration-count: infinite;
+}
+}
 
+ 
 
-
-
+@keyframes mymove {
+  from {transform: rotateY(0deg)}
+  to {transform: rotateY(360deg);}
+}
 
 
 
