@@ -60,7 +60,7 @@ const logoTexture3 = new THREE.TextureLoader().load('pics/own.png');
 const logoTexture= new THREE.TextureLoader().load('pics/logogif.gif');
 const logoTextureside = new THREE.TextureLoader().load('pics/DYOR.png');
 const logoTexture2 = new THREE.TextureLoader().load('pics/logomirror.png');
-const logo = new THREE.BoxGeometry(6, 4, 0.5);
+const logo = new THREE.BoxGeometry(6, 4, 0.3);
 const logomaterial = [
 
     new THREE.MeshPhongMaterial( {map: logoTexture3 }),
