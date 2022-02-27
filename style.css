@@ -4,6 +4,7 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+  height: 1000px;
 }
 
 html {
@@ -18,7 +19,6 @@ html {
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
-  background-image: url("pics/space.jpg");
   color: white;
   text-align: center;
 }

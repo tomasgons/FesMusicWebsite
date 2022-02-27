@@ -8,8 +8,13 @@ canvas {
   top: 0;
   left: 0;
   z-index: -1;
+
+  height: 1000px
  
 }
+
+
+
 
 html {
   scroll-behavior: smooth;
@@ -24,11 +29,11 @@ html {
 body {
   font-family: "Lato", sans-serif;
   margin: 0;
-  background-image: url('pics/space.jpg');
+  // background-image: url('pics/space.jpg');
 
   color: white;
-  text-align: center
-  
+  text-align: center;
+
 }
 
 

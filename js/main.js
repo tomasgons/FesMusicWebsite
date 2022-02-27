@@ -14,8 +14,8 @@ document.body.appendChild( renderer.domElement );
 
 
 camera.position.z = 5;
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+const pointLight = new THREE.DirectionalLight(0xffffff);
+pointLight.position.set(5, 2, 5);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
@@ -62,9 +62,9 @@ const logomaterial = [
      
    
    
-     new THREE.MeshBasicMaterial({ map: logoTexture }), 
+     new THREE.MeshPhongMaterial({ map: logoTexture }), 
   
-     new THREE.MeshBasicMaterial({ map: logoTexture2 }), ];
+     new THREE.MeshPhongMaterial({ map: logoTexture2 }), ];
 const billboard = new THREE.Mesh( logo, logomaterial );
 scene.add( billboard );
 
@@ -80,9 +80,10 @@ billboard.rotation.z += 0.001;
 //  Disc
 
 
-const discTexture = new THREE.TextureLoader().load('pics/fesmap2.jpg');
-const discTexture2 = new THREE.TextureLoader().load('pics/logo.png');
-const discmaterials = [new THREE.MeshBasicMaterial({ map: discTexture2 }), new THREE.MeshBasicMaterial({ map: discTexture }),  new THREE.MeshBasicMaterial({color: 'black' }),  ];
+const discTexture = new THREE.TextureLoader().load('pics/FCOIN.jpg');
+const discTexture2 = new THREE.TextureLoader().load('pics/trust.png');
+const discTexture3 = new THREE.TextureLoader().load('pics/FESCOIN.jpg');
+const discmaterials = [new THREE.MeshPhongMaterial({ map: discTexture2 }), new THREE.MeshPhongMaterial({ map: discTexture }),  new THREE.MeshPhongMaterial({ map: discTexture3 }),  ];
 
 const shape = new THREE.CylinderGeometry(6, 6, 0.3, 48);
 
@@ -94,7 +95,7 @@ scene.add( disc);
     // Tomas
 const tomasTexture = new THREE.TextureLoader().load('pics/tomasfes.png');
 const geometry = new THREE.CylinderGeometry(2, 2, 0.1, 48);
-const material = new THREE.MeshBasicMaterial({ map: tomasTexture });
+const material = new THREE.MeshPhongMaterial({ map: tomasTexture });
 const tomas = new THREE.Mesh( geometry, material );
 scene.add( tomas );
 
@@ -105,13 +106,13 @@ tomas.position.z = -9;
 
 const huibTexture = new THREE.TextureLoader().load('pics/huib.png');
 const huibGeometry = new THREE.CylinderGeometry(2, 2, 0.1, 48);
-const huibMaterial = new THREE.MeshBasicMaterial({ map: huibTexture });
+const huibMaterial = new THREE.MeshPhongMaterial({ map: huibTexture });
 const huib = new THREE.Mesh( huibGeometry, huibMaterial );
 scene.add( huib) 
 
 // A2
 const saidTexture = new THREE.TextureLoader().load('pics/said.jpg');
-const saidmaterial = new THREE.MeshBasicMaterial({ map: saidTexture });
+const saidmaterial = new THREE.MeshPhongMaterial({ map: saidTexture });
 const saidGeometry = new THREE.CylinderGeometry(2, 2, 0.1, 48);
 const said = new THREE.Mesh( saidGeometry, saidmaterial );
 
@@ -122,7 +123,7 @@ said.position.y = 3;
 said.position.z = -15;
 
 const maartenTexture = new THREE.TextureLoader().load('pics/maarten.png');
-const maartenmaterial = new THREE.MeshBasicMaterial({ map: maartenTexture });
+const maartenmaterial = new THREE.MeshPhongMaterial({ map: maartenTexture });
 const maartenGeometry = new THREE.CylinderGeometry(2, 2, 0.1, 48);
 const maarten = new THREE.Mesh( saidGeometry, maartenmaterial );
 
@@ -131,7 +132,7 @@ scene.add( maarten)
 
 //  Marijn
 const marijnTexture = new THREE.TextureLoader().load('pics/marijn.jpg');
-const marijnmaterial = new THREE.MeshBasicMaterial({ map: marijnTexture });
+const marijnmaterial = new THREE.MeshPhongMaterial({ map: marijnTexture });
 const marijnGeometry = new THREE.CylinderGeometry(2, 2, 0.1, 48);
 const marijn = new THREE.Mesh( marijnGeometry, marijnmaterial );
 
@@ -200,8 +201,9 @@ function animate() {
     billboard.rotation.y += 0.001;
     said.rotation.x += 0.01;
     said.rotation.y += 0.01;
-    disc.rotation.x += 0.001;
-    disc.rotation.y += 0.001;
+    disc.rotation.x += 0.002;
+    disc.rotation.y += 0.005;
+    disc.rotation.z += 0.001;
     marijn.rotation.z += 0.009;
     marijn.rotation.y += 0.015;
     maarten.rotation.z += 0.008;
