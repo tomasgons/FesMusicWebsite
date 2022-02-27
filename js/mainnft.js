@@ -54,17 +54,26 @@ scene.background = spaceTexture;
 
 
 // logo
+const logoTexture3 = new THREE.TextureLoader().load('pics/own.png');
 
-const logoTexture = new THREE.TextureLoader().load('pics/logogif.gif');
+const logoTexture= new THREE.TextureLoader().load('pics/logogif.gif');
+const logoTextureside = new THREE.TextureLoader().load('pics/DYOR.png');
 const logoTexture2 = new THREE.TextureLoader().load('pics/logomirror.png');
-const logo = new THREE.BoxGeometry(1, 4, 6);
+const logo = new THREE.BoxGeometry(6, 4, 0.5);
 const logomaterial = [
+
+    new THREE.MeshPhongMaterial( {map: logoTexture3 }),
+      new THREE.MeshPhongMaterial({ map: logoTexture3 }),
+      new THREE.MeshPhongMaterial({ map: logoTexture3 }),
+      new THREE.MeshPhongMaterial({ map: logoTextureside }),
+      new THREE.MeshPhongMaterial({ map: logoTexture }),
      
-   
-   
-     new THREE.MeshPhongMaterial({ map: logoTexture }), 
+     
+      new THREE.MeshPhongMaterial({ map: logoTexture2 }),
+     
   
-     new THREE.MeshPhongMaterial({ map: logoTexture2 }), ];
+   
+       ];
 const billboard = new THREE.Mesh( logo, logomaterial );
 scene.add( billboard );
 
@@ -81,10 +90,10 @@ billboard.rotation.z += 0.001;
 
 
 
-const discTexture = new THREE.TextureLoader().load('pics/FCOIN.jpg');
+const discTexture1 = new THREE.TextureLoader().load('pics/FCOIN.jpg');
 const discTexture2 = new THREE.TextureLoader().load('pics/trust.png');
 const discTexture3 = new THREE.TextureLoader().load('pics/FESCOIN.jpg');
-const discmaterials = [new THREE.MeshPhongMaterial({ map: discTexture2 }), new THREE.MeshPhongMaterial({ map: discTexture }),  new THREE.MeshPhongMaterial({ map: discTexture3 }),  ];
+const discmaterials = [new THREE.MeshPhongMaterial({ map: discTexture2 }), new THREE.MeshPhongMaterial({ map: discTexture1 }),  new THREE.MeshPhongMaterial({ map: discTexture3 }),  ];
 const shape = new THREE.CylinderGeometry(6, 6, 0.3, 48);
 
 const disc = new THREE.Mesh( shape, discmaterials );
