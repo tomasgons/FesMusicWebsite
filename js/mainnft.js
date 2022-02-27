@@ -14,8 +14,8 @@ document.body.appendChild( renderer.domElement );
 
 
 camera.position.z = 5;
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+const pointLight = new THREE.DirectionalLight(0xffffff);
+pointLight.position.set(-5, 5, 10);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
@@ -43,7 +43,7 @@ function addStar() {
   scene.add(star);
 }
 
-Array(700).fill().forEach(addStar);
+Array(600).fill().forEach(addStar);
 
 const spaceTexture = new THREE.TextureLoader().load('pics/space.jpg');
 scene.background = spaceTexture;
@@ -62,13 +62,13 @@ const logomaterial = [
      
    
    
-     new THREE.MeshBasicMaterial({ map: logoTexture }), 
+     new THREE.MeshPhongMaterial({ map: logoTexture }), 
   
-     new THREE.MeshBasicMaterial({ map: logoTexture2 }), ];
+     new THREE.MeshPhongMaterial({ map: logoTexture2 }), ];
 const billboard = new THREE.Mesh( logo, logomaterial );
 scene.add( billboard );
 
-billboard.position.x = -17;
+billboard.position.x = 17;
 billboard.position.y = 8;
 billboard.position.z = -16
 billboard.rotation.y +=30.5;
@@ -80,16 +80,17 @@ billboard.rotation.z += 0.001;
 //  Disc
 
 
-const discTexture = new THREE.TextureLoader().load('pics/fesmap2.jpg');
-const discTexture2 = new THREE.TextureLoader().load('pics/logo.png');
-const discmaterials = [new THREE.MeshBasicMaterial({ map: discTexture2 }), new THREE.MeshBasicMaterial({ map: discTexture }),  new THREE.MeshBasicMaterial({color: 'black' }),  ];
 
+const discTexture = new THREE.TextureLoader().load('pics/FCOIN.jpg');
+const discTexture2 = new THREE.TextureLoader().load('pics/trust.png');
+const discTexture3 = new THREE.TextureLoader().load('pics/FESCOIN.jpg');
+const discmaterials = [new THREE.MeshPhongMaterial({ map: discTexture2 }), new THREE.MeshPhongMaterial({ map: discTexture }),  new THREE.MeshPhongMaterial({ map: discTexture3 }),  ];
 const shape = new THREE.CylinderGeometry(6, 6, 0.3, 48);
 
 const disc = new THREE.Mesh( shape, discmaterials );
 
 
-scene.add( disc);
+// scene.add( disc);
 
     // Tomas
 const tomasTexture = new THREE.TextureLoader().load('pics/tomasfes.png');
@@ -148,13 +149,13 @@ maarten.position.x = -5;
 maarten.position.y = -1;
 maarten.position.z = -8
 
-disc.position.x = 23;
+disc.position.x = 17;
 disc.position.y = 14;
 disc.position.z = -28;
 
-disc.rotation.z += 1;
-disc.rotation.y += 1;
-
+disc.rotation.z += 1.5;
+disc.rotation.y += 1.5;
+disc.rotation.x += 0;
 huib.position.x =-1;
 huib.position.y = -2;
 huib.position.z = -10;
@@ -167,7 +168,9 @@ function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   
   
- 
+  disc.rotation.x += 0.03;
+  disc.rotation.y += 0.02;
+  disc.rotation.z += 0.03;
   maarten.rotation.x += 0.02;
   maarten.rotation.y += 0.02;
   said.rotation.x += 0.02;
@@ -176,7 +179,7 @@ function moveCamera() {
   huib.rotation.x += 0.03;
   huib.rotation.y += 0.02;
   huib.rotation.z += 0.02;
-  billboard.rotation.y += 0.01;
+  billboard.rotation.y += -0.03  ;
   maarten.rotation.x += 0.02;
   maarten.rotation.y += 0.02;
   maarten.rotation.z += 0.03
@@ -198,10 +201,11 @@ moveCamera();
 
 function animate() {
 	requestAnimationFrame( animate );
-    billboard.rotation.y += 0.001;
+    billboard.rotation.y += -0.008;
     said.rotation.x += 0.01;
     said.rotation.y += 0.01;
-    disc.rotation.x += 0.001;
+    disc.rotation.x += 0.002;
+    disc.rotation.y += 0.01;
     disc.rotation.z += 0.001;
     marijn.rotation.z += 0.009;
     marijn.rotation.y += 0.015;
