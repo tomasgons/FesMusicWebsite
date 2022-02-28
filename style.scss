@@ -40,6 +40,7 @@ body {
 p {
   font-size: 1.5rem;
 }
+
 h2 {
   font-size: 3rem;
   background: url(https://d2pn8kiwq2w21t.cloudfront.net/images/jpegPIA17669.width-1024.jpg);
@@ -61,7 +62,12 @@ header {
   margin-top: 1rem;
  margin-bottom: 3rem;
 
-  
+ .nft {
+  padding: 3rem;
+  text-align: left;
+  line-height: 2.5rem;
+  background: rgba(0, 0, 0, 0.17);
+}
 }
 
 
@@ -87,6 +93,7 @@ header {
   flex-direction: column;
  
   justify-content: space-between;
+  
 
   .card {
 
